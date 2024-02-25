@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;700;800&family=Mali:wght@300;400;700&family=Merienda:wght@400;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+
+    list-style: none;
+    outline: none;
+    font-family: var(--font-1), var(--font-4);
+    ;
+}
+
+:root {
+    --color--1: #F5EADE;
+    --color--2: #111311;
+    --color--3: #8DAA95;
+    --color--4: #26433F;
+    --color--5: #3F3682;
+    --color--6: #AC5BA3;
+    --color--7: #D7B4B2;
+    --color--8: #325454;
+    --font-1: 'Baloo 2';
+    --font-2: 'Mali';
+    --font-3: 'Roboto';
+    --font-4: 'Merienda';
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: back 40s infinite;
+
+}
+
+
+@keyframes back {
+    0% {
+        background-image: url('/image/background1.jpg');
+    }
+
+    20% {
+        background-image: url('/image/background2.png');
+    }
+
+    40% {
+        background-image: url('/image/product3.jpg');
+    }
+
+    60% {
+        background-image: url('/image/followalong2.jpg');
+    }
+
+    80% {
+        background-image: url('/image/followalong3.jpg');
+    }
+
+    100% {
+        background-image: url('/image/background1.jpg');
+    }
+
+}
+
+.container {
+
+    min-width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.176);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container2 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 700px;
+    aspect-ratio: 3/2;
+    border-radius: 10px;
+    background-color: white;
+
+}
+
+.container2 .carousel {
+    height: 100%;
+    width: 100%;
+}
+
+.container2 .carousel .slider {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    inset: 0;
+    position: relative;
+}
+
+
+
+
+
+.slider .slide {
+
+    width: 100%;
+    height: 100%;
+    clip-path: circle(150% at 0 51%);
+    position: absolute;
+    inset: 0;
+
+}
+
+.slide:not([data-active]) {
+    clip-path: circle(0% at 0 50%);
+    animation: out 3s;
+}
+
+.slide[data-active] {
+    z-index: 3;
+    animation-fill-mode: forwards;
+    animation: in 5s forwards;
+}
+
+.container2 .carousel img {
+    display: block;
+    border-radius: 10px 0 0 10px;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.container2:nth-child(2) {
+    width: 100%;
+    height: 100%;
+}
+
+.container2 .loginBox {
+    padding: 20px 40px;
+    text-align: center;
+}
+
+
+.loginBox h1 {
+
+    margin: 40px 0px 60px 0px;
+    font-size: 2rem;
+    color: var(--color--4);
+    font-family: var(--font-4);
+}
+
+.loginBox span {
+    display: block;
+    margin: 60px 0px;
+
+}
+
+.loginBox .input-group {
+    margin: 40px 0 10px 0px;
+    position: relative;
+    width: 100%;
+}
+
+.input-group label {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0px;
+    border: none;
+    border-bottom: 1px solid rgb(167, 165, 165);
+
+}
+
+.loginBox .input-group input:focus~label,
+.loginBox .input-group input:valid~label {
+    top: -20px;
+    left: 0;
+    font-size: 12px;
+}
+
+.forgotPassword {
+    text-align: right;
+}
+
+.forgotPassword a {
+    font-size: 0.9rem;
+    color: var(--color--3);
+}
+
+.forgotPassword a:hover {
+    color: var(--color--6);
+
+}
+
+button {
+    margin: 30px 0px;
+    padding: 10px 60px;
+    font-size: 1rem;
+    color: white;
+    border-radius: 500px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(to left, var(--color--4), var(--color--3) 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+
+}
+
+button:hover {
+    background-position: left;
+}
+
+.loginBox .or {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 2px;
+}
+
+.loginBox .or::before {
+    display: inline-block;
+    content: "";
+    width: 100px;
+    height: 1px;
+    background-color: #b3b3b3;
+    margin: 0px 10px;
+}
+
+.loginBox .or::after {
+    display: inline-block;
+    content: "";
+    width: 100px;
+    height: 1px;
+    background-color: #b3b3b3;
+    margin: 0px 10px;
+}
+
+.google {
+    margin: 30px 0px;
+}
+
+.signuplink {
+    margin: 30px 0px;
+    font-size: 0.9rem;
+}
+
+.signuplink a {
+    color: var(--color--3);
+
+}
+
+.signuplink a:hover {
+    color: var(--color--6);
+}
+
+@keyframes in {
+
+    0% {
+        clip-path: circle(0% at 0 50%);
+    }
+
+    100% {
+        clip-path: circle(150% at 0 50%);
+    }
+}
+
+@keyframes out {
+
+    0% {
+        clip-path: circle(150% at 0 50%);
+    }
+
+    100% {
+
+        clip-path: circle(0% at 0 50%);
+    }
+}
+
+@media (max-width:1080px) {
+    .container2 {
+
+
+        height: 500px;
+
+
+    }
+
+    .container2 .loginBox {
+        padding: 20px 20px;
+
+    }
+
+    .loginBox h1 {
+
+        margin: 20px 0px 20px 0px;
+
+    }
+
+    .loginBox span {
+        display: block;
+        margin: 15px 0px;
+
+    }
+
+    button {
+        margin: 15px 0px;
+        padding: 7px 40px;
+    }
+
+    .google {
+        margin: 15px 0px;
+    }
+
+    .signuplink {
+        margin: 0px;
+
+    }
+}
+
+@media (max-width:800px) {
+    .carousel {
+        display: none;
+    }
+
+    .container2 .loginBox {
+        padding: 20px 30px;
+
+    }
+
+    .container2 {
+
+        aspect-ratio: 3/4;
+        grid-template-columns: 100%;
+
+    }
+
+
+}
+
+@media (max-width:450px) {
+    .container2 {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+        place-items: center;
+    }
+
+    .container2 .loginBox {
+
+        width: 100%;
+    }
+}

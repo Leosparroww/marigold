@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./image/titleIcon.png" type="image/x-icon">
+    <title>Marigold - Shoppping page</title>
+    <link rel="stylesheet" href="css/shoppingPage.css">
+    <script src="./js/shopping.js" type="module" defer></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!-- navbar start -->
+    <section class="nav-bar">
+        <div class="nav-bar-menu">
+            <span class="bars" id="bar1"></span>
+            <span class="bars" id="bar2"></span>
+            <span class="bars" id="bar3"></span>
+        </div>
+        <div><a href="/index.html" class="logo">Marigold</a></div>
+        <div class="search-bar">
+            <input type="text">
+            <a href="" class="search-btn"><img src="./image/icon/search.png" alt=""></a>
+        </div>
+        <div class="nav-bar-helper">
+            <a href="/loginPage.html" class="profile"> <img src="./image/icon/user.png" alt=""></a>
+            <a class="cart" cart> <img src="./image/icon/cart.png" alt=""> <span>0</span></a>
+        </div>
+    </section>
+    <!-- navbar end -->
+    <div class="container">
+        <!-- carosel start -->
+        <div class="carousel">
+            <div class="slider" data-slides>
+                <div class="slide" data-active><img src="./image/slideimage1.jpg" alt=""></div>
+                <div class="slide"><img src="./image/slideimage2.jpg" alt=""></div>
+                <div class="slide"><img src="./image/slideimage3.jpg" alt=""></div>
+            </div>
+            <div class="slider-btn">
+                <button data-slide-button="prev">&#10094;</button>
+                <button data-slide-button="next">&#10095;</button>
+            </div>
+            <div data-button class="small-btn">
+                <div data-active></div>
+                <div>
+                </div>
+                <div></div>
+            </div>
+        </div>
+        <!-- carousel end -->
+        <!-- shop start -->
+        <div class="shop-container">
+            <!-- category container start -->
+            <div class="category-parent">
+                <div class="category">
+                    <div class="categories">
+                        <h3>Categories</h3>
+                        <div class="category-select">
+                            <label for="flower" class="first-label">Flower</label> <input type="checkbox" id="flower"
+                                class="category-check">
+                            <span class="arrow">&#10094;</span>
+                            <div class="select-box">
+                                <div><a href="">All flower</a></div>
+                                <div><a href="">Roses</a></div>
+                                <div><a href="">Lilies</a></div>
+                                <div><a href="">Tulips</a></div>
+                                <div><a href="">Lavanders</a></div>
+                                <div><a href="">Seasonal flower</a></div>
+                            </div>
+
+                        </div>
+                        <div class="category-select">
+                            <label for="plant" class="first-label">Plants</label> <input type="checkbox" id="plant"
+                                class="category-check">
+                            <span class="arrow">&#10094;</span>
+                            <div class="select-box">
+                                <div> <a href="">All plants</a></div>
+                                <div> <a href="">Indoor plants</a></div>
+                                <div> <a href="">Outdoor Plants</a></div>
+                                <div> <a href="">Bonsai </a></div>
+                                <div> <a href="">Herbs and Vegetables</a></div>
+                                <div> <a href="">Climbing and Trailing Plants</a></div>
+                                <div> <a href="">Aquatic Plants</a></div>
+                                <div> <a href="">Exotic and Tropical Plants</a></div>
+                                <div> <a href="">Rare and Collectible Plants</a></div>
+                                <div> <a href="">Plant Accessories</a></div>
+                                <div> <a href="">Gardening Tools</a></div>
+                                <div> <a href="">Plant Care and Maintenance</a></div>
+                                <div> <a href="">Gift Sets and Kits</a></div>
+                                <div> <a href="">Seasonal Plants</a></div>
+                            </div>
+                        </div>
+                        <div class="category-select">
+                            <label for="gift" class="first-label">Gifts</label> <input type="checkbox" id="gift"
+                                class="category-check">
+                            <span class="arrow">&#10094;</span>
+                            <div class="select-box">
+                                <div> <a href="">Birthday gifts</a></div>
+                                <div> <a href="">Anniversary gifts</a></div>
+                                <div> <a href="">Valentine's gifts</a></div>
+                                <div> <a href="">Mother's & father"s day gifts</a></div>
+                                <div> <a href="">Wedding gifts</a></div>
+                                <div> <a href="">Corporate and Business gifts</a></div>
+                                <div> <a href="">Just Because gifts</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter">
+                        <h3>Filter by</h3>
+                        <div class="color-select">
+                            <div class="category-header">Color select</div>
+                            <div class="color-box">
+                                <span class="">
+                                    <input type="checkbox" name="color" class="color-checkbox" id="color1"
+                                        class="color-radio">
+                                    <label for="color1" style="background-color:#000000;"> </label>
+                                </span>
+                                <span class="">
+                                    <input type="checkbox" name="color" class="color-checkbox" id="color2"
+                                        class="color-radio">
+                                    <label for="color2" style="background-color: rgb(0, 88, 139);"> </label>
+                                </span><span class="">
+                                    <input type="checkbox" name="color" class="color-checkbox" id="color3"
+                                        class="color-radio">
+                                    <label for="color3" style="background-color: rgb(72, 31, 119);"> </label>
+                                </span><span class="">
+                                    <input type="checkbox" name="color" class="color-checkbox" id="color4"
+                                        class="color-radio">
+                                    <label for="color4" style="background-color: rgb(253, 255, 147);"> </label>
+                                </span><span class="">
+                                    <input type="checkbox" name="color" class="color-checkbox" id="color5"
+                                        class="color-radio">
+                                    <label for="color5" style="background-color: rgb(214, 170, 255);"> </label>
+                                </span><span class="">
+                                    <input type="checkbox" name="color" class="color-checkbox" id="color6"
+                                        class="color-radio">
+                                    <label for="color6" style="background-color: rgb(40, 139, 0);"> </label>
+                                </span>
+
+                            </div>
+                        </div>
+                        <div class="price-select">
+                            <div class="category-header">
+                                Price
+                            </div>
+                            <div class="price-input">
+                                <div class="field">
+                                    <span> Min</span>
+                                    <input type="number" class="input-min" value="0" min="0">
+                                </div>
+                                <div class="separator">-</div>
+                                <div class="field">
+                                    <span> Max</span>
+                                    <input type="number" class="input-max" value="500000" max="500000">
+                                </div>
+                            </div>
+                            <div class="price-slider">
+                                <div class="progress"></div>
+                            </div>
+                            <div class="range-input">
+                                <input type="range" class="min-range" id="min-range" min="0" max="500000" value="0">
+                                <input type="range" class="max-range" id="max-range" min="0" max="500000"
+                                    value="500000">
+                            </div>
+                        </div>
+                        <!-- <div class="rating-select">
+                            <div class="category-header">Rating</div>
+                            <div> <input type="radio" name="rating" id="r1">
+                                <div class="star">
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                </div>
+                                <div>5.0</div>
+                            </div>
+                            <div> <input type="radio" name="rating" id="r2">
+                                <div class="star">
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#x2606;</span>
+                                </div>
+                                <div>4.0</div>
+                            </div>
+                            <div> <input type="radio" name="rating" id="r3">
+                                <div class="star">
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#x2606;</span>
+                                    <span>&#x2606;</span>
+                                </div>
+                                <div>3.0</div>
+                            </div>
+                            <div> <input type="radio" name="rating" id="r4">
+                                <div class="star">
+                                    <span>&#9733;</span>
+                                    <span>&#9733;</span>
+                                    <span>&#x2606;</span>
+                                    <span>&#x2606;</span>
+                                    <span>&#x2606;</span>
+                                </div>
+                                <div>2.0</div>
+                            </div>
+                            <div> <input type="radio" name="rating" id="r5">
+                                <div class="star">
+                                    <span>&#9733;</span>
+                                    <span>&#x2606;</span>
+                                    <span>&#x2606;</span>
+                                    <span>&#x2606;</span>
+                                    <span>&#x2606;</span>
+                                </div>
+                                <div>1.0</div>
+                            </div>
+                        </div> -->
+                        <div class="filter-btn"><button class="filter-btn1">filter</button> <button
+                                class="filter-btn2">Clear filter</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-btn">
+                    <img src="./image/icon/cross.png" alt="">
+                </div>
+            </div>
+            <!-- category container end -->
+            <!-- product container -->
+            <div class="product-container">
+                <div class="product-toolbar">
+                    <div class="view">
+                        <div>Views&ensp;:&ensp;</div>
+                        <div class="view-box" data-view-box>
+                            <div class="view-box1">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="view-box2">
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="view-box3">
+                                <span></span>
+                                <span></span><span></span>
+                            </div>
+                            <div class="view-box4" data-active>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="toolBar-child">
+                        <div class="show">
+                            <div>Show &ensp;:&ensp;</div>
+                            <div>
+                                <select id="show-select" class="show-select limit">
+                                    <option value="10" selected>10</option>
+                                    <option value="20">20</option>
+                                    <option value="30">30</option>
+                                    <option value="40">40</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="sort-by">
+                            <div>Sort by&ensp;:&ensp;</div>
+                            <div>
+                                <select class="show-select select-sortby">
+                                    <option value="" selected>Featured</option>
+                                    <option value="p1">Price, low to height</option>
+                                    <option value="p2">Price, height to low </option>
+                                    <option value="asc">A-Z</option>
+                                    <option value="desc">Z-A</option>
+                                    <option value="latest">By date, latest</option>
+                                    <option value="oldest">By date, oldest</option>
+                                    <!-- <option value="">Best selling</option> -->
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-list">
+                    <div class="product-card">
+                        <div class="product-img"><a href="/productPage.html"><img src="./image/product/sunflower.jpg"
+                                    alt=""></a>
+                            <div class="product-icon">
+                                <div class="quick-view"><img src="./image/icon/view.png" alt=""></div>
+                                <div class="add-cart"><img src="./image/icon/cart-plus.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="product-article">
+                            <div class="product-text">
+                                <div class="product-name">Sunflower</div>
+                                <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            </div>
+                            <div class="product-price">20000&ensp;kyats</div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img"><a href="/productPage.html"><img src="./image/product/redrose.jpg"
+                                    alt=""></a>
+                            <div class="product-icon">
+                                <div class="quick-view"><img src="./image/icon/view.png" alt="">
+                                </div>
+                                <div class="add-cart"><img src="./image/icon/cart-plus.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="product-article">
+                            <div class="product-text">
+                                <div class="product-name">Red Roses</div>
+                                <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            </div>
+                            <div class="product-text2">
+                                <div class="product-description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Ut soluta ducimus modi totam
+                                    expedita a laudantium ipsam numquam voluptatem illum.</div>
+                                <div class="product-price">40000&ensp;kyats</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img"><a href="/productPage.html"><img src="./image/product/laravander.jpg"
+                                    alt=""></a>
+                            <div class="product-icon">
+                                <div class="quick-view"><img src="./image/icon/view.png" alt=""></div>
+                                <div class="add-cart"><img src="./image/icon/cart-plus.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="product-article">
+                            <div class="product-text">
+                                <div class="product-name">lavander</div>
+                                <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            </div>
+                            <div class="product-text2">
+                                <div class="product-description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Ut soluta ducimus modi totam
+                                    expedita a laudantium ipsam numquam voluptatem illum.</div>
+                                <div class="product-price">40000&ensp;kyats</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img"><a href="/productPage.html"><img src="./image/product/tulips.jpg"
+                                    alt=""></a>
+                            <div class="product-icon">
+                                <div class="quick-view"><img src="./image/icon/view.png" alt=""></div>
+                                <div class="add-cart"><img src="./image/icon/cart-plus.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="product-article">
+                            <div class="product-text">
+                                <div class="product-name">Tulips</div>
+                                <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            </div>
+                            <div class="product-text2">
+                                <div class="product-description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Ut soluta ducimus modi totam
+                                    expedita a laudantium ipsam numquam voluptatem illum.</div>
+                                <div class="product-price">40000&ensp;kyats</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img"><a href="/productPage.html"><img src="./image/product/bonsai.jpg"
+                                    alt=""></a>
+                            <div class="product-icon">
+                                <div class="quick-view"><img src="./image/icon/view.png" alt=""></div>
+                                <div class="add-cart"><img src="./image/icon/cart-plus.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="product-article">
+                            <div class="product-text">
+                                <div class="product-name">bonsai</div>
+                                <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            </div>
+                            <div class="product-text2">
+                                <div class="product-description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Ut soluta ducimus modi totam
+                                    expedita a laudantium ipsam numquam voluptatem illum.</div>
+                                <div class="product-price">40000&ensp;kyats</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img"><a href="/productPage.html"><img src="./image/product/lilies.jpg"
+                                    alt=""></a>
+                            <div class="product-icon">
+                                <div class="quick-view"><img src="./image/icon/view.png" alt=""></div>
+                                <div class="add-cart"><img src="./image/icon/cart-plus.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="product-article">
+                            <div class="product-text">
+                                <div class="product-name">lilies</div>
+                                <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            </div>
+                            <div class="product-text2">
+                                <div class="product-description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Ut soluta ducimus modi totam
+                                    expedita a laudantium ipsam numquam voluptatem illum.</div>
+                                <div class="product-price">40000&ensp;kyats</div>
+                                <div class="product-article"> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img"><a href="/productPage.html"><img src="./image/product/petunias.jpg"
+                                    alt=""></a>
+                            <div class="product-icon">
+                                <div class="quick-view"><img src="./image/icon/view.png" alt=""></div>
+                                <div class="add-cart"><img src="./image/icon/cart-plus.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="product-article">
+                            <div class="product-text">
+                                <div class="product-name">petunias</div>
+                                <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            </div>
+                            <div class="product-price">120000&ensp;kyats</div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img"><a href="/productPage.html"><img src="./image/product/yellowroses.jpg"
+                                    alt=""></a>
+                            <div class="product-icon">
+                                <div class="quick-view"><img src="./image/icon/view.png" alt=""></div>
+                                <div class="add-cart"><img src="./image/icon/cart-plus.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="product-article">
+                            <div class="product-text">
+                                <div class="product-name">yellow roses</div>
+                                <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            </div>
+                            <div class="product-price">30000&ensp;kyats</div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img"><a href="/productPage.html"><img
+                                    src="./image/product/Monsteradeliciosa.jpg" alt=""></a>
+                            <div class="product-icon">
+                                <div class="quick-view"><img src="./image/icon/view.png" alt=""></div>
+                                <div class="add-cart"><img src="./image/icon/cart-plus.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="product-article">
+                            <div class="product-text">
+                                <div class="product-name">Monstera deliciosa</div>
+                                <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            </div>
+                            <div class="product-price">10000&ensp;kyats</div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img"><a href="/productPage.html"><img src="./image/product/Frangipani.jpg"
+                                    alt=""></a>
+                            <div class="product-icon">
+                                <div class="quick-view"><img src="./image/icon/view.png" alt=""></div>
+                                <div class="add-cart"><img src="./image/icon/cart-plus.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="product-article">
+                            <div class="product-text">
+                                <div class="product-name">Frangipani</div>
+                                <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            </div>
+                            <div class="product-price">40000&ensp;kyats</div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img"><a href="/productPage.html"><img
+                                    src="./image/product/Africandaisies.jpg" alt=""></a>
+                            <div class="product-icon">
+                                <div class="quick-view"><img src="./image/icon/view.png" alt=""></div>
+                                <div class="add-cart"><img src="./image/icon/cart-plus.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="product-article">
+                            <div class="product-text">
+                                <div class="product-name">African daisies</div>
+                                <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            </div>
+                            <div class="product-price">40000&ensp;kyats</div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img"><a href="/productPage.html"><img
+                                    src="./image/product/BridalBouquets.jpg" alt=""></a>
+                            <div class="product-icon">
+                                <div class="quick-view"><img src="./image/icon/view.png" alt=""></div>
+                                <div class="add-cart"><img src="./image/icon/cart-plus.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="product-article">
+                            <div class="product-text">
+                                <div class="product-name">Bridal Bouquets</div>
+                                <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            </div>
+                            <div class="product-price">20000&ensp;kyats</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="pagi"></div>
+                <div class="product-quick-view">
+                    <div class="quick-view-card">
+                        <div class="quick-img"><img src="./image/product/BridalBouquets.jpg" alt=""></div>
+                        <div class="quick-article">
+                            <div class="quick-category">Bouquets</div>
+                            <div class="quick-header">Tulips</div>
+                            <div class="quick-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Nihil laborum ullam aliquam. Voluptas ipsa doloremque repellat suscipit neque incidunt
+                                commodi.</div>
+                            <div class="size">
+                                <h4>SIZE</h4>
+                                <div>
+
+                                </div>
+                            </div>
+                            <div class="quick-color">
+                                <h4>COLOR</h4>
+                                <span>
+
+                                </span>
+                            </div>
+                            <div class="quick-price">
+                                <span class="price2">
+                                    20000 KYATS
+                                </span>
+                                <div class="quick-quantity">
+                                    <input class="quantity" name="quantity" min='1' value="1" type="number">
+                                    <div class="quick-btn">
+                                        <button
+                                            onclick="document.querySelector('.quick-quantity input[type=number]').stepDown()">&#8595;</button>
+                                        <button
+                                            onclick="document.querySelector('.quick-quantity input[type=number]').stepUp()"
+                                            class="plus">&#x2191;</button>
+                                    </div>
+                                </div>
+                                <div class="quick-cart"><a href="">Add to cart&ensp;&#128722;</a></div>
+                            </div>
+                            <div class="quick-cross">
+                                &#10761;
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- product container -->
+        </div>
+
+    </div>
+    <aside class="cart-sidebar" data-cart-active="false">
+        <div class="cart-sidebar1"></div>
+        <div class="cart-sidebar2">
+            <div class="side-cart-cross"><span class="sc-cross" sc-cross-main>&#10006;</span></div>
+            <div class="side-cart-header">Shopping Cart&ensp;:</div>
+            <div class="cart-sidebar3" cart-sidebar>
+
+            </div>
+        </div>
+    </aside>
+    <!-- footer start -->
+    <footer>
+        <div>
+            <h1>Marigold</h1>
+        </div>
+        <div class="footer-shop" data-footer>
+            <h3>SHOP</h3>
+            <div data-display="true">
+                <span>Flower</span>
+                <span>Plants</span>
+                <span>Gift</span>
+                <span>Events</span>
+            </div>
+        </div>
+        <div class="footer-about" data-footer>
+            <h3>ABOUT</h3>
+            <div data-display="true"><span>Meet the team</span>
+                <span>Careers</span>
+                <span>Blog</span>
+                <span>FAQs</span>
+            </div>
+
+        </div>
+        <div class="footer-contact" data-footer>
+            <h3>CONTACT</h3>
+            <div data-display="true">
+                <span>Get in Touch</span>
+                <span>Customers Support</span>
+                <span>Location</span>
+            </div>
+        </div>
+        <div class="footer-connect" data-footer>
+            <h3>LET'S CONNECT</h3>
+            <div class="social-icon" data-display="false">
+                <svg fill="#000000" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <title>instagram</title>
+                        <path
+                            d="M25.805 7.996c0 0 0 0.001 0 0.001 0 0.994-0.806 1.799-1.799 1.799s-1.799-0.806-1.799-1.799c0-0.994 0.806-1.799 1.799-1.799v0c0.993 0.001 1.798 0.805 1.799 1.798v0zM16 20.999c-2.761 0-4.999-2.238-4.999-4.999s2.238-4.999 4.999-4.999c2.761 0 4.999 2.238 4.999 4.999v0c0 0 0 0.001 0 0.001 0 2.76-2.237 4.997-4.997 4.997-0 0-0.001 0-0.001 0h0zM16 8.3c0 0 0 0-0 0-4.253 0-7.7 3.448-7.7 7.7s3.448 7.7 7.7 7.7c4.253 0 7.7-3.448 7.7-7.7v0c0-0 0-0 0-0.001 0-4.252-3.447-7.7-7.7-7.7-0 0-0 0-0.001 0h0zM16 3.704c4.003 0 4.48 0.020 6.061 0.089 1.003 0.012 1.957 0.202 2.84 0.538l-0.057-0.019c1.314 0.512 2.334 1.532 2.835 2.812l0.012 0.034c0.316 0.826 0.504 1.781 0.516 2.778l0 0.005c0.071 1.582 0.087 2.057 0.087 6.061s-0.019 4.48-0.092 6.061c-0.019 1.004-0.21 1.958-0.545 2.841l0.019-0.058c-0.258 0.676-0.64 1.252-1.123 1.726l-0.001 0.001c-0.473 0.484-1.049 0.866-1.692 1.109l-0.032 0.011c-0.829 0.316-1.787 0.504-2.788 0.516l-0.005 0c-1.592 0.071-2.061 0.087-6.072 0.087-4.013 0-4.481-0.019-6.072-0.092-1.008-0.019-1.966-0.21-2.853-0.545l0.059 0.019c-0.676-0.254-1.252-0.637-1.722-1.122l-0.001-0.001c-0.489-0.47-0.873-1.047-1.114-1.693l-0.010-0.031c-0.315-0.828-0.506-1.785-0.525-2.785l-0-0.008c-0.056-1.575-0.076-2.061-0.076-6.053 0-3.994 0.020-4.481 0.076-6.075 0.019-1.007 0.209-1.964 0.544-2.85l-0.019 0.059c0.247-0.679 0.632-1.257 1.123-1.724l0.002-0.002c0.468-0.492 1.045-0.875 1.692-1.112l0.031-0.010c0.823-0.318 1.774-0.509 2.768-0.526l0.007-0c1.593-0.056 2.062-0.075 6.072-0.075zM16 1.004c-4.074 0-4.582 0.019-6.182 0.090-1.315 0.028-2.562 0.282-3.716 0.723l0.076-0.025c-1.040 0.397-1.926 0.986-2.656 1.728l-0.001 0.001c-0.745 0.73-1.333 1.617-1.713 2.607l-0.017 0.050c-0.416 1.078-0.67 2.326-0.697 3.628l-0 0.012c-0.075 1.6-0.090 2.108-0.090 6.182s0.019 4.582 0.090 6.182c0.028 1.315 0.282 2.562 0.723 3.716l-0.025-0.076c0.796 2.021 2.365 3.59 4.334 4.368l0.052 0.018c1.078 0.415 2.326 0.669 3.628 0.697l0.012 0c1.6 0.075 2.108 0.090 6.182 0.090s4.582-0.019 6.182-0.090c1.315-0.029 2.562-0.282 3.716-0.723l-0.076 0.026c2.021-0.796 3.59-2.365 4.368-4.334l0.018-0.052c0.416-1.078 0.669-2.326 0.697-3.628l0-0.012c0.075-1.6 0.090-2.108 0.090-6.182s-0.019-4.582-0.090-6.182c-0.029-1.315-0.282-2.562-0.723-3.716l0.026 0.076c-0.398-1.040-0.986-1.926-1.729-2.656l-0.001-0.001c-0.73-0.745-1.617-1.333-2.607-1.713l-0.050-0.017c-1.078-0.416-2.326-0.67-3.628-0.697l-0.012-0c-1.6-0.075-2.108-0.090-6.182-0.090z">
+                        </path>
+                    </g>
+                </svg>
+                <svg fill="#000000" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <title>facebook</title>
+                        <path
+                            d="M30.996 16.091c-0.001-8.281-6.714-14.994-14.996-14.994s-14.996 6.714-14.996 14.996c0 7.455 5.44 13.639 12.566 14.8l0.086 0.012v-10.478h-3.808v-4.336h3.808v-3.302c-0.019-0.167-0.029-0.361-0.029-0.557 0-2.923 2.37-5.293 5.293-5.293 0.141 0 0.281 0.006 0.42 0.016l-0.018-0.001c1.199 0.017 2.359 0.123 3.491 0.312l-0.134-0.019v3.69h-1.892c-0.086-0.012-0.185-0.019-0.285-0.019-1.197 0-2.168 0.97-2.168 2.168 0 0.068 0.003 0.135 0.009 0.202l-0.001-0.009v2.812h4.159l-0.665 4.336h-3.494v10.478c7.213-1.174 12.653-7.359 12.654-14.814v-0z">
+                        </path>
+                    </g>
+                </svg>
+                <svg fill="#000000" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <title>pinterest</title>
+                        <path
+                            d="M16.021 1.004c-0 0-0.001 0-0.002 0-8.273 0-14.979 6.706-14.979 14.979 0 6.308 3.899 11.705 9.419 13.913l0.101 0.036c-0.087-0.595-0.137-1.281-0.137-1.979 0-0.819 0.068-1.622 0.2-2.403l-0.012 0.084c0.274-1.171 1.757-7.444 1.757-7.444-0.284-0.636-0.449-1.379-0.449-2.16 0-0.023 0-0.046 0-0.069l-0 0.004c0-2.078 1.208-3.638 2.709-3.638 0.008-0 0.018-0 0.028-0 1.040 0 1.883 0.843 1.883 1.883 0 0.080-0.005 0.159-0.015 0.236l0.001-0.009c-0.307 1.903-0.738 3.583-1.304 5.199l0.064-0.21c-0.042 0.161-0.067 0.345-0.067 0.535 0 1.2 0.973 2.173 2.173 2.173 0.039 0 0.078-0.001 0.117-0.003l-0.005 0c2.659 0 4.709-2.805 4.709-6.857 0.002-0.054 0.003-0.118 0.003-0.182 0-3.265-2.647-5.913-5.913-5.913-0.123 0-0.244 0.004-0.365 0.011l0.017-0.001c-0.083-0.004-0.18-0.006-0.277-0.006-3.58 0-6.482 2.902-6.482 6.482 0 0.007 0 0.014 0 0.022v-0.001c0 0 0 0.001 0 0.001 0 1.287 0.417 2.476 1.122 3.441l-0.011-0.016c0.076 0.081 0.122 0.191 0.122 0.311 0 0.043-0.006 0.084-0.017 0.123l0.001-0.003c-0.112 0.469-0.366 1.498-0.417 1.703-0.066 0.281-0.215 0.339-0.501 0.206-1.843-1.214-3.043-3.274-3.043-5.614 0-0.068 0.001-0.135 0.003-0.202l-0 0.010c0-4.719 3.434-9.062 9.897-9.062 0.132-0.007 0.287-0.011 0.442-0.011 4.811 0 8.72 3.862 8.795 8.655l0 0.007c0 5.167-3.258 9.325-7.789 9.325-0.039 0.001-0.086 0.002-0.132 0.002-1.366 0-2.573-0.677-3.306-1.713l-0.008-0.013-0.936 3.559c-0.488 1.499-1.123 2.8-1.91 3.992l0.038-0.061c1.325 0.425 2.85 0.671 4.432 0.671 8.274 0 14.981-6.707 14.981-14.981 0-8.272-6.705-14.978-14.977-14.981h-0z">
+                        </path>
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <div class="copyright">© 2023 MARIGOLD FLOWERS & SHOP&ensp;|&ensp;PRIVACY POLICY&ensp;|&ensp;TERMS OF USE </div>
+    </footer>
+    <!-- footer end -->
+</body>
+
+
+</html>

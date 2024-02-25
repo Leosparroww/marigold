@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/image/titleIcon.png" type="image/x-icon" />
+  <title>Marigold</title>
+  <link rel="stylesheet" href="./css/index.css" />
+  <script src="./js/index.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <!-- scroll bar and mouse style -->
+    <div class="scroll-bar">
+      <img src="./image/scrollbar2.png" alt="" class="scroll-div">
+    </div>
+    <div class="cursor" onmouseover="fullBtn()">
+
+      <div class="cursor2">
+        <img src="./image/mouse2.png" alt="">
+      </div>
+      <div class="cursor1 ">
+        <img src="./image/mouse1.png" alt="" class="imgfull ">
+        <img src="./image/prev.png" class="imgprev" alt="">
+        <img src="./image/next.png" class="imgnext" alt="">
+      </div>
+    </div>
+    <!-- carousel start -->
+    <header class="carousel" data-carousel onmouseover="mouseOver()" onmouseout="mouseOut()">
+      <!-- navbar start -->
+      <section class="nav-bar" onmouseover="mouseOver(),fullBtn()" onmouseout="mouseOut()">
+        <h1 class="logo">Marigold</h1>
+        <ul class="nav-bar-helper">
+          <div class="nav-bar-item">
+            <li><a href="https://www.youtube.com/watch?v=vQtYtlp5jrA">Contact</a></li>
+            <li><a href="">FAQ</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="/shoppingPage.html">Shop</a></li>
+            <li><a href="loginPage.html" class="login"><button>Login</button></a></li>
+          </div>
+          <span class="nav-bar-menu">
+            <input type="checkbox" id="checkbox" class="checkbox" />
+            <label for="checkbox" class="toggle" onclick="checkIn()">
+              <div class="bars" id="bar1"></div>
+              <div class="bars" id="bar2"></div>
+              <div class="bars" id="bar3"></div>
+            </label>
+          </span>
+        </ul>
+      </section>
+      <!-- navbar end -->
+      <div class="btn-group">
+
+        <div class="btn prev" data-carousel-button="prev" onmouseover="prevBtn()"> PREV</div>
+        <div class="progress">
+          <div></div>
+        </div>
+        <div class="btn next" data-carousel-button="next" onmouseover="nextBtn()">NEXT</div>
+      </div>
+      <ul class="text-box" data-text onmouseover="fullBtn()">
+        <div class="text" data-active>
+
+          <h1>A bouquet for every ocasion</h1>
+          <span>Want to send your condolences,or your love and support?
+            No matter how the message you want to share, we have bouquet for you
+          </span><br>
+          <a href="/shoppingPage.html"> SHOP ALL FLOWER</a>
+
+        </div>
+        <div class="text">
+
+          <h1>Your Green Oasis Awaits!</h1>
+          <span>Are you seeking a touch of nature to elevate your living space?
+            Escape to a world of natural wonders with our extraordinary plants
+          </span><br>
+          <a href="/shoppingPage.html"> SHOP ALL PLANTS</a>
+
+        </div>
+        <div class="text">
+
+          <h1>Are you ready to embark on a remarkable event planning journey?</h1>
+          <span>Look no further, because we are here to turn your vision into a reality.
+          </span><br>
+          <a href="#">PLAN A EVENT </a>
+
+        </div>
+
+      </ul>
+      <ul data-slides>
+        <li class="slide" data-active>
+          <img src="./image/slideimage2.jpg" alt="" />
+        </li>
+        <li class="slide">
+          <img src="./image/slideimage1.jpg" alt="" />
+
+        </li>
+        <li class="slide">
+
+          <img src="./image/slideimage3.jpg" alt="" />
+
+        </li>
+      </ul>
+    </header>
+    <!-- carouselend -->
+    <section class="product">
+      <div class="product-text">
+        <h3>Ours products <span> </span></h3>
+      </div>
+      <div class="product-card">
+        <div>
+          <img src="./image/product1.jpg" alt="" />
+          <a class="card-text" href="/shoppingPage.html">Flowers
+            <svg width="64px" height="64px" viewBox="-2.4 -2.4 28.80 28.80" xmlns="http://www.w3.org/2000/svg"
+              fill="none" stroke="#000000" transform="rotate(0)">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
+                stroke-width="1.584"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.4800000000000001"
+                  d="M4 12h16m0 0l-6 6m6-6l-6-6"></path>
+              </g>
+            </svg>
+          </a>
+        </div>
+        <div>
+          <img src="./image/product2.jpg" alt="" />
+          <a class="card-text" href="/shoppingPage.html">Plants & Trees
+            <svg width="64px" height="64px" viewBox="-2.4 -2.4 28.80 28.80" xmlns="http://www.w3.org/2000/svg"
+              fill="none" stroke="#000000" transform="rotate(0)">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
+                stroke-width="1.584"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.4800000000000001"
+                  d="M4 12h16m0 0l-6 6m6-6l-6-6"></path>
+              </g>
+            </svg>
+          </a>
+        </div>
+        <div>
+          <img src="./image/product3.jpg" alt="" />
+          <a class="card-text" href="/shoppingPage.html">Gifts
+            <svg width="64px" height="64px" viewBox="-2.4 -2.4 28.80 28.80" xmlns="http://www.w3.org/2000/svg"
+              fill="none" stroke="#000000" transform="rotate(0)">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
+                stroke-width="1.584"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.4800000000000001"
+                  d="M4 12h16m0 0l-6 6m6-6l-6-6"></path>
+              </g>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="event">
+      <div class="">
+        <article>
+          <h1>Planning an event?</h1>
+          <p>&ensp;&ensp;With our expert team of event planners by your side, we'll guide you through every step of the
+            process,
+            ensuring a
+            seamless and unforgettable experience that exceeds your expectations.</p>
+        </article>
+        <a href="">PLAN YOUR EVENT</a>
+      </div>
+      <div>
+        <img src="./image/makeingflower.jpg" alt="" />
+      </div>
+      <div class="">
+        <h1>Need a little help?</h1>
+        <p>
+          " Our flower care tips will guide you on watering, trimming, and nurturing your blooms,
+          ensuring they
+          thrive and bring joy to your surroundings "
+        </p>
+        <a href="">How to care for your plants</a>
+      </div>
+      <div class="about-us">
+        <h1>About us</h1>
+        <p>
+          Welcome to our small, family-owned botanical boutique in Rota, YGN. With our handcrafted flower
+          arrangements, lush
+          plants, and curated gifts, we help you express love and create memorable moments.
+        </p>
+        <article>
+          <h4>Find us</h4>
+          <span> Brook street,
+            <br> Rota, YGN</span>
+        </article>
+        <article>
+          <span>
+            <h4>Opening hours</h4>
+            <span>Monday - Saturday, 9am-6pm <br>
+              Sunday, 10am-4pm
+            </span>
+            <span>
+        </article>
+      </div>
+      <div class=""><img src="./image/about.jpg" alt="" /></div>
+    </section>
+    <!-- follow along start-->
+    <section class="social-following">
+      <div class="social-text">
+        <h1>Follow along</h1>
+        <span>Stay up to date by following us on pinterest&ensp;<a href=""> @nobody</a></span>
+      </div>
+      <div class="social-image">
+        <img src="./image/followalong1.jpg" alt="">
+        <img src="./image/followalong2.jpg" alt="">
+        <img src="./image/followalong3.jpg" alt="">
+        <img src="./image/followalong4.jpg" alt="">
+        <img src="./image/followalong5.jpg" alt="">
+        <img src="./image/followalong6.jpg" alt="">
+      </div>
+    </section>
+    <!-- follow along  end-->
+    <!-- footer start -->
+    <footer>
+      <div>
+        <h1>Marigold</h1>
+      </div>
+      <div class="footer-shop" data-footer>
+        <h3>SHOP</h3>
+        <div data-display="true">
+          <span>Flower</span>
+          <span>Plants</span>
+          <span>Gift</span>
+          <span>Events</span>
+        </div>
+      </div>
+      <div class="footer-about" data-footer>
+        <h3>ABOUT</h3>
+        <div data-display="true"><span>Meet the team</span>
+          <span>Careers</span>
+          <span>Blog</span>
+          <span>FAQs</span>
+        </div>
+
+      </div>
+      <div class="footer-contact" data-footer>
+        <h3>CONTACT</h3>
+        <div data-display="true">
+          <span>Get in Touch</span>
+          <span>Customers Support</span>
+          <span>Location</span>
+        </div>
+      </div>
+      <div class="footer-connect" data-footer>
+        <h3>LET'S CONNECT</h3>
+        <div class="social-icon" data-display="true">
+          <svg fill="#000000" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <title>instagram</title>
+              <path
+                d="M25.805 7.996c0 0 0 0.001 0 0.001 0 0.994-0.806 1.799-1.799 1.799s-1.799-0.806-1.799-1.799c0-0.994 0.806-1.799 1.799-1.799v0c0.993 0.001 1.798 0.805 1.799 1.798v0zM16 20.999c-2.761 0-4.999-2.238-4.999-4.999s2.238-4.999 4.999-4.999c2.761 0 4.999 2.238 4.999 4.999v0c0 0 0 0.001 0 0.001 0 2.76-2.237 4.997-4.997 4.997-0 0-0.001 0-0.001 0h0zM16 8.3c0 0 0 0-0 0-4.253 0-7.7 3.448-7.7 7.7s3.448 7.7 7.7 7.7c4.253 0 7.7-3.448 7.7-7.7v0c0-0 0-0 0-0.001 0-4.252-3.447-7.7-7.7-7.7-0 0-0 0-0.001 0h0zM16 3.704c4.003 0 4.48 0.020 6.061 0.089 1.003 0.012 1.957 0.202 2.84 0.538l-0.057-0.019c1.314 0.512 2.334 1.532 2.835 2.812l0.012 0.034c0.316 0.826 0.504 1.781 0.516 2.778l0 0.005c0.071 1.582 0.087 2.057 0.087 6.061s-0.019 4.48-0.092 6.061c-0.019 1.004-0.21 1.958-0.545 2.841l0.019-0.058c-0.258 0.676-0.64 1.252-1.123 1.726l-0.001 0.001c-0.473 0.484-1.049 0.866-1.692 1.109l-0.032 0.011c-0.829 0.316-1.787 0.504-2.788 0.516l-0.005 0c-1.592 0.071-2.061 0.087-6.072 0.087-4.013 0-4.481-0.019-6.072-0.092-1.008-0.019-1.966-0.21-2.853-0.545l0.059 0.019c-0.676-0.254-1.252-0.637-1.722-1.122l-0.001-0.001c-0.489-0.47-0.873-1.047-1.114-1.693l-0.010-0.031c-0.315-0.828-0.506-1.785-0.525-2.785l-0-0.008c-0.056-1.575-0.076-2.061-0.076-6.053 0-3.994 0.020-4.481 0.076-6.075 0.019-1.007 0.209-1.964 0.544-2.85l-0.019 0.059c0.247-0.679 0.632-1.257 1.123-1.724l0.002-0.002c0.468-0.492 1.045-0.875 1.692-1.112l0.031-0.010c0.823-0.318 1.774-0.509 2.768-0.526l0.007-0c1.593-0.056 2.062-0.075 6.072-0.075zM16 1.004c-4.074 0-4.582 0.019-6.182 0.090-1.315 0.028-2.562 0.282-3.716 0.723l0.076-0.025c-1.040 0.397-1.926 0.986-2.656 1.728l-0.001 0.001c-0.745 0.73-1.333 1.617-1.713 2.607l-0.017 0.050c-0.416 1.078-0.67 2.326-0.697 3.628l-0 0.012c-0.075 1.6-0.090 2.108-0.090 6.182s0.019 4.582 0.090 6.182c0.028 1.315 0.282 2.562 0.723 3.716l-0.025-0.076c0.796 2.021 2.365 3.59 4.334 4.368l0.052 0.018c1.078 0.415 2.326 0.669 3.628 0.697l0.012 0c1.6 0.075 2.108 0.090 6.182 0.090s4.582-0.019 6.182-0.090c1.315-0.029 2.562-0.282 3.716-0.723l-0.076 0.026c2.021-0.796 3.59-2.365 4.368-4.334l0.018-0.052c0.416-1.078 0.669-2.326 0.697-3.628l0-0.012c0.075-1.6 0.090-2.108 0.090-6.182s-0.019-4.582-0.090-6.182c-0.029-1.315-0.282-2.562-0.723-3.716l0.026 0.076c-0.398-1.040-0.986-1.926-1.729-2.656l-0.001-0.001c-0.73-0.745-1.617-1.333-2.607-1.713l-0.050-0.017c-1.078-0.416-2.326-0.67-3.628-0.697l-0.012-0c-1.6-0.075-2.108-0.090-6.182-0.090z">
+              </path>
+            </g>
+          </svg>
+          <svg fill="#000000" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <title>facebook</title>
+              <path
+                d="M30.996 16.091c-0.001-8.281-6.714-14.994-14.996-14.994s-14.996 6.714-14.996 14.996c0 7.455 5.44 13.639 12.566 14.8l0.086 0.012v-10.478h-3.808v-4.336h3.808v-3.302c-0.019-0.167-0.029-0.361-0.029-0.557 0-2.923 2.37-5.293 5.293-5.293 0.141 0 0.281 0.006 0.42 0.016l-0.018-0.001c1.199 0.017 2.359 0.123 3.491 0.312l-0.134-0.019v3.69h-1.892c-0.086-0.012-0.185-0.019-0.285-0.019-1.197 0-2.168 0.97-2.168 2.168 0 0.068 0.003 0.135 0.009 0.202l-0.001-0.009v2.812h4.159l-0.665 4.336h-3.494v10.478c7.213-1.174 12.653-7.359 12.654-14.814v-0z">
+              </path>
+            </g>
+          </svg>
+          <svg fill="#000000" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <title>pinterest</title>
+              <path
+                d="M16.021 1.004c-0 0-0.001 0-0.002 0-8.273 0-14.979 6.706-14.979 14.979 0 6.308 3.899 11.705 9.419 13.913l0.101 0.036c-0.087-0.595-0.137-1.281-0.137-1.979 0-0.819 0.068-1.622 0.2-2.403l-0.012 0.084c0.274-1.171 1.757-7.444 1.757-7.444-0.284-0.636-0.449-1.379-0.449-2.16 0-0.023 0-0.046 0-0.069l-0 0.004c0-2.078 1.208-3.638 2.709-3.638 0.008-0 0.018-0 0.028-0 1.040 0 1.883 0.843 1.883 1.883 0 0.080-0.005 0.159-0.015 0.236l0.001-0.009c-0.307 1.903-0.738 3.583-1.304 5.199l0.064-0.21c-0.042 0.161-0.067 0.345-0.067 0.535 0 1.2 0.973 2.173 2.173 2.173 0.039 0 0.078-0.001 0.117-0.003l-0.005 0c2.659 0 4.709-2.805 4.709-6.857 0.002-0.054 0.003-0.118 0.003-0.182 0-3.265-2.647-5.913-5.913-5.913-0.123 0-0.244 0.004-0.365 0.011l0.017-0.001c-0.083-0.004-0.18-0.006-0.277-0.006-3.58 0-6.482 2.902-6.482 6.482 0 0.007 0 0.014 0 0.022v-0.001c0 0 0 0.001 0 0.001 0 1.287 0.417 2.476 1.122 3.441l-0.011-0.016c0.076 0.081 0.122 0.191 0.122 0.311 0 0.043-0.006 0.084-0.017 0.123l0.001-0.003c-0.112 0.469-0.366 1.498-0.417 1.703-0.066 0.281-0.215 0.339-0.501 0.206-1.843-1.214-3.043-3.274-3.043-5.614 0-0.068 0.001-0.135 0.003-0.202l-0 0.010c0-4.719 3.434-9.062 9.897-9.062 0.132-0.007 0.287-0.011 0.442-0.011 4.811 0 8.72 3.862 8.795 8.655l0 0.007c0 5.167-3.258 9.325-7.789 9.325-0.039 0.001-0.086 0.002-0.132 0.002-1.366 0-2.573-0.677-3.306-1.713l-0.008-0.013-0.936 3.559c-0.488 1.499-1.123 2.8-1.91 3.992l0.038-0.061c1.325 0.425 2.85 0.671 4.432 0.671 8.274 0 14.981-6.707 14.981-14.981 0-8.272-6.705-14.978-14.977-14.981h-0z">
+              </path>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div class="copyright">© 2023 MARIGOLD FLOWERS & SHOP&ensp;|&ensp;PRIVACY POLICY&ensp;|&ensp;TERMS OF USE </div>
+    </footer>
+    <!-- footer end -->
+  </div>
+</body>
+
+
+</html>
