@@ -524,7 +524,11 @@ function closeCategory() {
 import { addToCart } from "./modu.js";
 const cartBask = document.querySelector("[cart]");
 const cartCount = () => {
-  var cartCount = JSON.parse(localStorage.getItem("cartMarigold")).length;
+  var cartCount =
+    localStorage.getItem("cartMarigold") == null
+      ? 0
+      : JSON.parse(localStorage.getItem("cartMarigold")).length;
+
   cartBask.querySelector("span").innerHTML = cartCount;
 };
 cartCount();
@@ -533,7 +537,10 @@ cartCount();
 
 const cartSideBar = (pp) => {
   cartCount();
-  var cartData = JSON.parse(localStorage.getItem("cartMarigold"));
+  var cartData =
+    localStorage.getItem("cartMarigold") == null
+      ? []
+      : JSON.parse(localStorage.getItem("cartMarigold"));
   var cartHtml1 = document.querySelector("[cart-sidebar]");
   if (cartData == "") {
     cartHtml1.innerHTML = `
@@ -566,6 +573,7 @@ const cartSideBar = (pp) => {
   var cartHtml2 = "";
   var totalPrice = 0;
   var tt = cartHtml1.querySelector(".side-cart-total");
+
   cartData.forEach((cartData) => {
     var cartProduc = bem.find((e) => e.product_id == cartData.product_id);
     cartHtml2 += `
