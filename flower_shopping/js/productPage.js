@@ -36,7 +36,7 @@ const productId = new URL(window.location).searchParams.get("id");
 //   let image = product.image.split(",");
 //   let r = "";
 //   image.forEach((img, index) => {
-//     r += `<img src="http://localhost:8000/storage/image/${img}" alt="" >`;
+//     r += `<img src="https://fdfg.theorymm.com/storage/image/${img}" alt="" >`;
 //   });
 //   productImg.innerHTML = r;
 //   big.innerHTML = r;
@@ -78,7 +78,7 @@ const productId = new URL(window.location).searchParams.get("id");
 //       console.log(error);
 //     });
 // }
-// productData("http://localhost:8000/api/item");
+// productData("https://fdfg.theorymm.com/api/item");
 
 // async function categoryData(url) {
 //   let res = await fetch(url)
@@ -103,9 +103,9 @@ imgChild.forEach((element) => {
   var imgChidImage = "";
   productImage.forEach((img, index) => {
     if (index == 0) {
-      imgChidImage += `<img src="http://localhost:8000/storage/image/${img}" alt="" data-active>`;
+      imgChidImage += `<img src="https://fdfg.theorymm.com/storage/image/${img}" alt="" data-active>`;
     } else {
-      imgChidImage += `<img src="http://localhost:8000/storage/image/${img}" alt="" >`;
+      imgChidImage += `<img src="https://fdfg.theorymm.com/storage/image/${img}" alt="" >`;
     }
   });
   element.innerHTML = imgChidImage;
@@ -332,7 +332,7 @@ const cartSideBar = () => {
     cartHtml2 += `
                     <div class="sd-cart-product">
                         <img
-                                    src="http://localhost:8000/storage/image/${
+                                    src="https://fdfg.theorymm.com/storage/image/${
                                       cartProduc.image.split(",")[0]
                                     }" alt="">
                         <div class="sd-cart-descript">
