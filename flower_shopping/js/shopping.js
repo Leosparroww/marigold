@@ -124,7 +124,7 @@ async function categoryData(url) {
       console.log(error);
     });
 }
-categoryData("http://127.0.0.1:8000/api/category");
+categoryData("https://fdfg.theorymm.com//api/category");
 //product data
 async function productData(url) {
   let res = await fetch(url)
@@ -139,7 +139,7 @@ async function productData(url) {
       console.log(error);
     });
 }
-productData("http://127.0.0.1:8000/api/item");
+productData("https://fdfg.theorymm.com//api/item");
 
 
 
@@ -331,7 +331,7 @@ function productListApply(productLists) {
                         <div class="product-img"><a href="/productPage.html?id=${
                           list.product_id
                         }"><span hidden disabled>${list.product_id}</span><img
-                                    src="http://127.0.0.1:8000/storage/image/${
+                                    src="https://fdfg.theorymm.com//storage/image/${
                                       list.image.split(",")[0]
                                     }" alt=""></a>
                             <div class="product-icon">
@@ -475,7 +475,7 @@ const cartSideBar = (pp) => {
     cartHtml2 += `
                     <div class="sd-cart-product">
                         <img 
-                                    src="http://127.0.0.1:8000/storage/image/${
+                                    src="https://fdfg.theorymm.com//storage/image/${
                                       cartProduc.image.split(",")[0]
                                     }" alt="">
                         <div class="sd-cart-descript">
@@ -562,7 +562,7 @@ function quickViewFunc(id) {
                                     `;
     }
   });
-  productQuickViewCard.innerHTML = `<div class="quick-img" bis_skin_checked="1"><img src="http://127.0.0.1:8000/storage/image/${
+  productQuickViewCard.innerHTML = `<div class="quick-img" bis_skin_checked="1"><img src="https://fdfg.theorymm.com//storage/image/${
     data.image.split(",")[0]
   }" alt=""></div>
                         <div class="quick-article" bis_skin_checked="1">
