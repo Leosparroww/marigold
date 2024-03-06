@@ -240,10 +240,9 @@ filterBtn.forEach((filter) => {
 //color box
 
 //category innerHtml
-const categoryDada = JSON.parse(sessionStorage.getItem("category"));
-var colorList = categoryDada.color;
-var categoryList = categoryDada.category;
-var groupList = categoryDada.group;
+var colorList = JSON.parse(sessionStorage.getItem("category")).color;
+var categoryList = JSON.parse(sessionStorage.getItem("category")).category;
+var groupList = JSON.parse(sessionStorage.getItem("category")).group;
 
 function categoryDataApply() {
   const colorBox = document.querySelector(".color-box");
