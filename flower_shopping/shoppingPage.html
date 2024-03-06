@@ -7,10 +7,38 @@
     <link rel="icon" href="./image/titleIcon.png" type="image/x-icon">
     <title>Marigold - Shoppping page</title>
     <link rel="stylesheet" href="css/shoppingPage.css">
-    <script src="./js/shopping.js" type="module" defer></script>
-    <style>
+    <script>// category data
+        async function categoryData(url) {
+          let res = await fetch(url)
+            .then((response) => {
+              return response.json();
+            })
+            .then((data) => {
+              sessionStorage.setItem("category", JSON.stringify(data));
+            })
+            .catch(function (error) {
+              console.log(error);
+            });
+        }
+        categoryData("http://127.0.0.1:8000/api/category");
+        //product data
+        async function productData(url) {
+          let res = await fetch(url)
+            .then((response) => {
+              return response.json();
+            })
+            .then((data) => {
+              sessionStorage.setItem("productList", JSON.stringify(data));
+            })
+            .catch(function (error) {
+              console.log(error);
+            });
+        }
+        productData("http://127.0.0.1:8000/api/item");
+        
+        </script>
+    <style></style>
 
-    </style>
 </head>
 
 <body>
@@ -644,5 +672,7 @@
     <!-- footer end -->
 </body>
 
+<script src="./js/shopping.js" type="module" ></script>
+   
 
 </html>

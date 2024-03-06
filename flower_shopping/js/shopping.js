@@ -1,3 +1,5 @@
+import { addToCart } from "./modu.js";
+import { PaginationButton, footer } from "./modu.js";
 const slides = document.querySelector("[data-slides]");
 const pin = document.querySelector("[data-button]");
 var timer = setInterval(carousel, 10000);
@@ -78,36 +80,6 @@ rangeInput.forEach((input) => {
     }
   });
 });
-
-// category data
-async function categoryData(url) {
-  let res = await fetch(url)
-    .then((response) => {
-      return response.json();
-    })
-    .then((data) => {
-      sessionStorage.setItem("category", JSON.stringify(data));
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-}
-categoryData("https://fdfg.theorymm.com/api/category");
-//product data
-async function productData(url) {
-  let res = await fetch(url)
-    .then((response) => {
-      return response.json();
-    })
-    .then((data) => {
-      sessionStorage.setItem("productList", JSON.stringify(data));
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-}
-productData("https://fdfg.theorymm.com/api/item");
-
 // for view box
 const viewBox = document.querySelectorAll("[data-view-box] div");
 const viewBox1 = document.querySelector("[data-view-box]");
@@ -130,6 +102,7 @@ viewBox.forEach((view) => {
   });
 });
 
+
 function productStyle() {
   let ind = sessionStorage.getItem("index") * 1;
   ind == 0 ? (productList.dataset.box = true) : delete productList.dataset.box;
@@ -138,149 +111,71 @@ function productStyle() {
   }, minmax(auto, 1fr));`;
 }
 
-// for quick view
+// category data
+async function categoryData(url) {
+  let res = await fetch(url)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      sessionStorage.setItem("category", JSON.stringify(data));
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
+categoryData("http://127.0.0.1:8000/api/category");
+//product data
+async function productData(url) {
+  let res = await fetch(url)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      sessionStorage.setItem("productList", JSON.stringify(data));
+      wait()
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
+productData("http://127.0.0.1:8000/api/item");
+
+
+
+function wait(){
+  // for quick view
 
 const quickView = document.querySelector(".quick-cross");
 const quickView1 = document.querySelectorAll(".quick-view");
 const productQuickView = document.querySelector(".product-quick-view");
 const productQuickViewCard = document.querySelector(".quick-view-card");
 
-function quickViewFunc(id) {
-  productQuickView.style.display = "grid";
-  let data = tem.find((x) => x.product_id == id);
-  var qcolorList = data.color.split(",");
-  var qcolorSelect = "";
-  qcolorList.forEach((list) => {
-    var qColorCode = colorList.find((e) => e.name === list).color_code;
-
-    if (qColorCode == "Mixed") {
-      qcolorSelect += `
-            <input type="radio" name="color" id="${qColorCode}" class="color-radio" value="${list}">
-            <label for="${qColorCode}"style="display:grid;grid-template-columns: 50% 50%;"  title="${list}"> 
-           <div style="width:100%;height:100%;background-color:#FF85A2;border-radius:100% 0px 0 0%">
-              </div>
-              <div style="width:100%;height:100%;background-color:#FFE300;border-radius:0 100% 0px 0">
-              </div>
-               <div style="width:100%;height:100%;background-color:#5A86AD;border-radius: 0px 0 0% 100%">
-              </div>
-              <div style="width:100%;height:100%;background-color:#FFF9EC;border-radius:0 0% 100% 0px">
-              </div> 
-              </label>
-            `;
-    } else {
-      qcolorSelect += `
-              <input type="radio" name="color" id="${qColorCode}" class="color-radio"  value="${list}">
-            <label for="${qColorCode}" style="background-color:${qColorCode};"  title="${list}"> </label>
-                                    `;
-    }
-  });
-  productQuickViewCard.innerHTML = `<div class="quick-img" bis_skin_checked="1"><img src="https://fdfg.theorymm.com/storage/image/${
-    data.image.split(",")[0]
-  }" alt=""></div>
-                        <div class="quick-article" bis_skin_checked="1">
-                            <div class="quick-category" bis_skin_checked="1">${
-                              data.categoryName
-                            }</div>
-                            <div class="quick-header" bis_skin_checked="1">${
-                              data.name
-                            }</div>
-                            <div class="quick-description" bis_skin_checked="1">${
-                              data.decription
-                            }</div>
-                            <div class="size" bis_skin_checked="1">
-                                <h4>SIZE</h4>
-                                <div bis_skin_checked="1">
-                                    <span><input type="radio" name="qcolor" id="qcolor1" class="qCheck" checked="" value="S"><label for="qcolor1"> Standard</label></span>
-                                    <span><input type="radio" name="qcolor" id="qcolor2" class="qCheck" value="D"><label for="qcolor2">Deluxe</label></span>
-                                    <span><input type="radio" name="qcolor" id="qcolor3" class="qCheck" value="P"><label for="qcolor3">Premium</label></span>
-                                </div>
-                            </div>
-                            <div class="quick-color color11" bis_skin_checked="1">
-                                <h4>COLOR</h4>
-                                   <div class="color-check">
-                                       ${qcolorSelect}
-                                    </div>
-                            </div>
-                            <div class="quick-price" bis_skin_checked="1">
-                                <span class="price2">
-                               
-                                    <span>${data.price}</span> KYATS
-                                </span>
-                                <div class="quick-quantity" bis_skin_checked="1">
-                                    <input class="quantity" name="quantity" min="1" value="1" type="number">
-                                    <div class="quick-btn" bis_skin_checked="1">
-                                        <button  class='minus'>↓</button>
-                                        <button class="plus">↑</button>
-                                    </div>
-                                </div>
-                                <div class="quick-cart" bis_skin_checked="1">Add to cart&ensp;🛒</div>
-                            </div>
-                            <div class="quick-cross" bis_skin_checked="1">
-                                ⨉
-                            </div>
-                        </div>
-`;
-
-  // color checked
-
-  productQuickViewCard.querySelector(".color-check input").checked = true;
-
-  //cross delete
-  productQuickViewCard
-    .querySelector(".quick-cross")
-    .addEventListener("click", function () {
-      productQuickView.style.display = "none";
-    });
-
-  //price calculate quick view
-  var qUnit = productQuickViewCard.querySelector(".quantity");
-  var qPrice = productQuickViewCard.querySelector(".price2 span");
-  qUnit.addEventListener("change", function () {
-    qPrice.innerHTML = data.price * qUnit.value;
-  });
-  productQuickViewCard.querySelectorAll(".quick-btn button").forEach((e) => {
-    e.addEventListener("click", function () {
-      e.classList == "plus" ? qUnit.stepUp() : qUnit.stepDown();
-      qPrice.innerHTML = data.price * qUnit.value;
-    });
-  });
-
-  //addtocart
-  productQuickViewCard
-    .querySelector(".quick-cart")
-    .addEventListener("click", (e) => {
-      var psize = productQuickViewCard.querySelector(
-        '.size input[name="qcolor"]:checked'
-      ).value;
-      var pcolor = productQuickViewCard.querySelector(
-        '.color-check input[name="color"]:checked'
-      ).value;
-      addToCart(data.product_id, pcolor, qUnit.value * 1, psize);
-      cartCount();
-    });
-}
 
 //product data
 const productli = document.querySelector(".product-list");
 
 var productLists = JSON.parse(sessionStorage.getItem("productList"));
-productLists = paginate(productLists, 1, 10);
-productListApply(productLists);
+
+
 var tem = JSON.parse(sessionStorage.getItem("productList"));
 var bem = JSON.parse(sessionStorage.getItem("productList"));
-var itemCount = tem.length;
 
 //pagination
-import { PaginationButton, footer } from "./modu.js";
+
 var paginationButtons = new PaginationButton(itemCount, 10, 5);
 paginationButtons.render();
 
 //footer display
 footer();
 var productPage = 1;
+// productLists = paginate(productLists, 1, 10);
+productListApply(productLists);
 
+var itemCount = tem.length;
 //paginate
 function paginate(array, page_number, page_size) {
+ 
   return array.slice((page_number - 1) * page_size, page_number * page_size);
 }
 
@@ -430,12 +325,13 @@ categoryDataApply();
 //product apply
 function productListApply(productLists) {
   let html = "";
+  
   productLists.forEach((list) => {
     html += `<div class="product-card">
                         <div class="product-img"><a href="/productPage.html?id=${
                           list.product_id
                         }"><span hidden disabled>${list.product_id}</span><img
-                                    src="https://fdfg.theorymm.com/storage/image/${
+                                    src="http://127.0.0.1:8000/storage/image/${
                                       list.image.split(",")[0]
                                     }" alt=""></a>
                             <div class="product-icon">
@@ -521,7 +417,7 @@ function closeCategory() {
 }
 
 //addtocart
-import { addToCart } from "./modu.js";
+
 const cartBask = document.querySelector("[cart]");
 const cartCount = () => {
   var cartCount =
@@ -579,7 +475,7 @@ const cartSideBar = (pp) => {
     cartHtml2 += `
                     <div class="sd-cart-product">
                         <img 
-                                    src="https://fdfg.theorymm.com/storage/image/${
+                                    src="http://127.0.0.1:8000/storage/image/${
                                       cartProduc.image.split(",")[0]
                                     }" alt="">
                         <div class="sd-cart-descript">
@@ -634,3 +530,122 @@ cartBask.addEventListener("click", () => {
   cartSideBar(bem);
   cartDisplay();
 });
+
+
+
+function quickViewFunc(id) {
+  productQuickView.style.display = "grid";
+  let data = tem.find((x) => x.product_id == id);
+  var qcolorList = data.color.split(",");
+  var qcolorSelect = "";
+  qcolorList.forEach((list) => {
+    var qColorCode = colorList.find((e) => e.name === list).color_code;
+
+    if (qColorCode == "Mixed") {
+      qcolorSelect += `
+            <input type="radio" name="color" id="${qColorCode}" class="color-radio" value="${list}">
+            <label for="${qColorCode}"style="display:grid;grid-template-columns: 50% 50%;"  title="${list}"> 
+           <div style="width:100%;height:100%;background-color:#FF85A2;border-radius:100% 0px 0 0%">
+              </div>
+              <div style="width:100%;height:100%;background-color:#FFE300;border-radius:0 100% 0px 0">
+              </div>
+               <div style="width:100%;height:100%;background-color:#5A86AD;border-radius: 0px 0 0% 100%">
+              </div>
+              <div style="width:100%;height:100%;background-color:#FFF9EC;border-radius:0 0% 100% 0px">
+              </div> 
+              </label>
+            `;
+    } else {
+      qcolorSelect += `
+              <input type="radio" name="color" id="${qColorCode}" class="color-radio"  value="${list}">
+            <label for="${qColorCode}" style="background-color:${qColorCode};"  title="${list}"> </label>
+                                    `;
+    }
+  });
+  productQuickViewCard.innerHTML = `<div class="quick-img" bis_skin_checked="1"><img src="http://127.0.0.1:8000/storage/image/${
+    data.image.split(",")[0]
+  }" alt=""></div>
+                        <div class="quick-article" bis_skin_checked="1">
+                            <div class="quick-category" bis_skin_checked="1">${
+                              data.categoryName
+                            }</div>
+                            <div class="quick-header" bis_skin_checked="1">${
+                              data.name
+                            }</div>
+                            <div class="quick-description" bis_skin_checked="1">${
+                              data.decription
+                            }</div>
+                            <div class="size" bis_skin_checked="1">
+                                <h4>SIZE</h4>
+                                <div bis_skin_checked="1">
+                                    <span><input type="radio" name="qcolor" id="qcolor1" class="qCheck" checked="" value="S"><label for="qcolor1"> Standard</label></span>
+                                    <span><input type="radio" name="qcolor" id="qcolor2" class="qCheck" value="D"><label for="qcolor2">Deluxe</label></span>
+                                    <span><input type="radio" name="qcolor" id="qcolor3" class="qCheck" value="P"><label for="qcolor3">Premium</label></span>
+                                </div>
+                            </div>
+                            <div class="quick-color color11" bis_skin_checked="1">
+                                <h4>COLOR</h4>
+                                   <div class="color-check">
+                                       ${qcolorSelect}
+                                    </div>
+                            </div>
+                            <div class="quick-price" bis_skin_checked="1">
+                                <span class="price2">
+                               
+                                    <span>${data.price}</span> KYATS
+                                </span>
+                                <div class="quick-quantity" bis_skin_checked="1">
+                                    <input class="quantity" name="quantity" min="1" value="1" type="number">
+                                    <div class="quick-btn" bis_skin_checked="1">
+                                        <button  class='minus'>↓</button>
+                                        <button class="plus">↑</button>
+                                    </div>
+                                </div>
+                                <div class="quick-cart" bis_skin_checked="1">Add to cart&ensp;🛒</div>
+                            </div>
+                            <div class="quick-cross" bis_skin_checked="1">
+                                ⨉
+                            </div>
+                        </div>
+`;
+
+  // color checked
+
+  productQuickViewCard.querySelector(".color-check input").checked = true;
+
+  //cross delete
+  productQuickViewCard
+    .querySelector(".quick-cross")
+    .addEventListener("click", function () {
+      productQuickView.style.display = "none";
+    });
+
+  //price calculate quick view
+  var qUnit = productQuickViewCard.querySelector(".quantity");
+  var qPrice = productQuickViewCard.querySelector(".price2 span");
+  qUnit.addEventListener("change", function () {
+    qPrice.innerHTML = data.price * qUnit.value;
+  });
+  productQuickViewCard.querySelectorAll(".quick-btn button").forEach((e) => {
+    e.addEventListener("click", function () {
+      e.classList == "plus" ? qUnit.stepUp() : qUnit.stepDown();
+      qPrice.innerHTML = data.price * qUnit.value;
+    });
+  });
+
+  //addtocart
+  productQuickViewCard
+    .querySelector(".quick-cart")
+    .addEventListener("click", (e) => {
+      var psize = productQuickViewCard.querySelector(
+        '.size input[name="qcolor"]:checked'
+      ).value;
+      var pcolor = productQuickViewCard.querySelector(
+        '.color-check input[name="color"]:checked'
+      ).value;
+      addToCart(data.product_id, pcolor, qUnit.value * 1, psize);
+      cartCount();
+    });
+}
+
+}
