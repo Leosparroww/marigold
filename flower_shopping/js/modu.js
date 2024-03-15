@@ -169,3 +169,27 @@ export function addToCart(productId, color, count = 1, size = "S") {
 
   localStorage.setItem("cartMarigold", cartj);
 }
+
+//loader 
+
+export function loader(stat = 0) {
+  const body = document.body
+  let div = document.createElement("div")
+  body.append(div)
+  body.style.overflow = 'hidden'
+  div.classList.add('loader');
+  div.style.cssText = "position:fixed;left: 0; top: 0;right: 0;bottom: 0; width: 100vw; height: 100vh;z-index: 90";
+  var xhr = new XMLHttpRequest();
+  xhr.onload = function () {
+    div.innerHTML = this.response;
+  };
+  xhr.open('GET', '/loader.html', true);
+  xhr.send();
+
+  if (stat == 1) {
+
+    body.style.overflow = 'auto'
+    document.querySelector('.loader').remove()
+    div.remove()
+  }
+}

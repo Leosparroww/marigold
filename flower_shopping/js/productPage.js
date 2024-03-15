@@ -99,6 +99,11 @@ var productImage = product.image.split(",");
 var imageHtml = document.querySelector("[product-img]");
 var imgChild = [].slice.call(imageHtml.children);
 
+let title = document.querySelector('title')
+title.innerHTML = 'Marigold - ' + product.name
+
+
+//image
 imgChild.forEach((element) => {
   var imgChidImage = "";
   productImage.forEach((img, index) => {
@@ -125,7 +130,7 @@ imgSmall.forEach((imgSm, index) => {
 });
 
 const article = document.querySelector("[product-article]");
-console.log(product);
+
 article.innerHTML = `<div class="product-name">${product.name}</div>
                 <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#x2606;</div>
                 <div class="product-description">${product.decription}</div>
@@ -285,14 +290,16 @@ addToCartBtn.addEventListener("click", () => {
 // var producttt = JSON.parse(sessionStorage.getItem("product"));
 const cartBask = document.querySelector("[cart]");
 const cartCount = () => {
-  var cartCount = JSON.parse(localStorage.getItem("cartMarigold")).length;
+ 
+  var cartCount = JSON.parse(localStorage.getItem("cartMarigold")) == null ? 0 : JSON.parse(localStorage.getItem("cartMarigold")).length;
+ 
   cartBask.querySelector("span").innerHTML = cartCount;
 };
 cartCount();
 
 const cartSideBar = () => {
   cartCount();
-  var cartData = JSON.parse(localStorage.getItem("cartMarigold"));
+  var cartData = JSON.parse(localStorage.getItem("cartMarigold")) == null? []:JSON.parse(localStorage.getItem("cartMarigold"));
   var cartHtml1 = document.querySelector("[cart-sidebar]");
   if (cartData == "") {
     cartHtml1.innerHTML = `
@@ -366,6 +373,7 @@ const cartSideBar = () => {
     });
   });
 };
+
 cartSideBar();
 
 const cartSideMain = document.querySelector("[data-cart-active]");
@@ -387,3 +395,13 @@ cartBask.addEventListener("click", () => {
   cartSideBar();
   cartDisplay();
 });
+
+
+
+//add to cart
+// console.log(product);
+// const addCartBtn = document.querySelector('[addcart-btn]')
+// addCartBtn.addEventListener('click',()=>{
+//   //addToCart(data.product_id, pcolor, qUnit.value * 1, psize);
+//    addToCart(product.product_id,'default')
+// })

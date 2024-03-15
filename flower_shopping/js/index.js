@@ -1,3 +1,4 @@
+
 var lastScrollTop = 0;
 let scrollHeight = document.documentElement.scrollHeight;
 const scrolls = document.querySelector(".scroll-bar");
@@ -61,6 +62,7 @@ buttons.forEach((button) => {
     const offset = button.dataset.carouselButton === "next" ? 1 : -1;
     const activeSlide = slides.querySelector("[data-active]");
     newIndex = [...slides.children].indexOf(activeSlide) + offset;
+    
     if (newIndex < 0) newIndex = slides.children.length - 1;
     if (newIndex >= slides.children.length) newIndex = 0;
     slides.children[newIndex].dataset.active = true;
@@ -69,14 +71,14 @@ buttons.forEach((button) => {
     const activeText = text.querySelector("[data-active]");
     text.children[newIndex].dataset.active = true;
     delete activeText.dataset.active;
-    progressBar(newIndex, (total = slides.children.length));
+    progressBar(newIndex, (slides.children.length));
   });
   // progressBar
   const activeSlide = slides.querySelector("[data-active]");
   let newIndex = [...slides.children].indexOf(activeSlide);
-  progressBar(newIndex, (total = slides.children.length));
+  progressBar(newIndex, (slides.children.length));
 });
-function progressBar(newIndex) {
+function progressBar(newIndex,total) {
   let progress = ((newIndex + 1) / total) * 100;
   progress = progress.toFixed(0);
   document.querySelector(".progress div").style.width = progress + "%";
@@ -164,3 +166,9 @@ function footer(id) {
 }
 
 footer();
+
+// import { loader } from "./modu.js";
+// loader();
+// setTimeout(()=>{
+//   loader(1)
+// },1000)
