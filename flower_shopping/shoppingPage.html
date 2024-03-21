@@ -7,13 +7,14 @@
     <link rel="icon" href="./image/titleIcon.png" type="image/x-icon">
     <title>Marigold - Shoppping page</title>
     <link rel="stylesheet" href="css/shoppingPage.css">
-    
-    <style></style>
+
+    <style>
+    </style>
     <script src="./js/shopping.js" type="module" defer></script>
 </head>
 
 <body>
-  
+
     <!-- navbar start -->
     <section class="nav-bar">
         <div class="nav-bar-menu">
@@ -23,8 +24,12 @@
         </div>
         <div><a href="/index.html" class="logo">Marigold</a></div>
         <div class="search-bar">
-            <input type="text">
-            <a href="" class="search-btn"><img src="./image/icon/search.png" alt=""></a>
+            <form autocomplete="off" class="search-form" action="/action_page.php" style="width: 100%;">
+                <div class=" search-bar">
+                    <input id="myInput" style="width:100% ;" type="text" name="myCountry" placeholder="Search">
+                    <button class="search-btn"><img src="./image/icon/search.png" alt=""></button>
+                </div>
+            </form>
         </div>
         <div class="nav-bar-helper">
             <a href="/loginPage.html" class="profile"> <img src="./image/icon/user.png" alt=""></a>
@@ -55,7 +60,7 @@
         <!-- shop start -->
         <div class="shop-container">
             <!-- category container start -->
-            <div class="category-parent">
+            <div class="category-parent" data-active="false">
                 <div class="category">
                     <div class="categories">
                         <h3>Categories</h3>
@@ -303,7 +308,7 @@
                             <div class="product-price">20000&ensp;kyats</div>
                         </div>
                     </div>
-                    <div class="product-card">
+                    <!-- <div class="product-card">
                         <div class="product-img"><a href="/productPage.html"><img src="./image/product/redrose.jpg"
                                     alt=""></a>
                             <div class="product-icon">
@@ -326,191 +331,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="product-card">
-                        <div class="product-img"><a href="/productPage.html"><img src="./image/product/laravander.jpg"
-                                    alt=""></a>
-                            <div class="product-icon">
-                                <div class="quick-view"><img src="./image/icon/view.png" alt=""></div>
-                                <div class="add-cart"><img src="./image/icon/cart-plus.png" alt=""></div>
-                            </div>
-                        </div>
-                        <div class="product-article">
-                            <div class="product-text">
-                                <div class="product-name">lavander</div>
-                                <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            </div>
-                            <div class="product-text2">
-                                <div class="product-description">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Ut soluta ducimus modi totam
-                                    expedita a laudantium ipsam numquam voluptatem illum.</div>
-                                <div class="product-price">40000&ensp;kyats</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-img"><a href="/productPage.html"><img src="./image/product/tulips.jpg"
-                                    alt=""></a>
-                            <div class="product-icon">
-                                <div class="quick-view"><img src="./image/icon/view.png" alt=""></div>
-                                <div class="add-cart"><img src="./image/icon/cart-plus.png" alt=""></div>
-                            </div>
-                        </div>
-                        <div class="product-article">
-                            <div class="product-text">
-                                <div class="product-name">Tulips</div>
-                                <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            </div>
-                            <div class="product-text2">
-                                <div class="product-description">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Ut soluta ducimus modi totam
-                                    expedita a laudantium ipsam numquam voluptatem illum.</div>
-                                <div class="product-price">40000&ensp;kyats</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-img"><a href="/productPage.html"><img src="./image/product/bonsai.jpg"
-                                    alt=""></a>
-                            <div class="product-icon">
-                                <div class="quick-view"><img src="./image/icon/view.png" alt=""></div>
-                                <div class="add-cart"><img src="./image/icon/cart-plus.png" alt=""></div>
-                            </div>
-                        </div>
-                        <div class="product-article">
-                            <div class="product-text">
-                                <div class="product-name">bonsai</div>
-                                <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            </div>
-                            <div class="product-text2">
-                                <div class="product-description">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Ut soluta ducimus modi totam
-                                    expedita a laudantium ipsam numquam voluptatem illum.</div>
-                                <div class="product-price">40000&ensp;kyats</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-img"><a href="/productPage.html"><img src="./image/product/lilies.jpg"
-                                    alt=""></a>
-                            <div class="product-icon">
-                                <div class="quick-view"><img src="./image/icon/view.png" alt=""></div>
-                                <div class="add-cart"><img src="./image/icon/cart-plus.png" alt=""></div>
-                            </div>
-                        </div>
-                        <div class="product-article">
-                            <div class="product-text">
-                                <div class="product-name">lilies</div>
-                                <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            </div>
-                            <div class="product-text2">
-                                <div class="product-description">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Ut soluta ducimus modi totam
-                                    expedita a laudantium ipsam numquam voluptatem illum.</div>
-                                <div class="product-price">40000&ensp;kyats</div>
-                                <div class="product-article"> </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-img"><a href="/productPage.html"><img src="./image/product/petunias.jpg"
-                                    alt=""></a>
-                            <div class="product-icon">
-                                <div class="quick-view"><img src="./image/icon/view.png" alt=""></div>
-                                <div class="add-cart"><img src="./image/icon/cart-plus.png" alt=""></div>
-                            </div>
-                        </div>
-                        <div class="product-article">
-                            <div class="product-text">
-                                <div class="product-name">petunias</div>
-                                <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            </div>
-                            <div class="product-price">120000&ensp;kyats</div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-img"><a href="/productPage.html"><img src="./image/product/yellowroses.jpg"
-                                    alt=""></a>
-                            <div class="product-icon">
-                                <div class="quick-view"><img src="./image/icon/view.png" alt=""></div>
-                                <div class="add-cart"><img src="./image/icon/cart-plus.png" alt=""></div>
-                            </div>
-                        </div>
-                        <div class="product-article">
-                            <div class="product-text">
-                                <div class="product-name">yellow roses</div>
-                                <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            </div>
-                            <div class="product-price">30000&ensp;kyats</div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-img"><a href="/productPage.html"><img
-                                    src="./image/product/Monsteradeliciosa.jpg" alt=""></a>
-                            <div class="product-icon">
-                                <div class="quick-view"><img src="./image/icon/view.png" alt=""></div>
-                                <div class="add-cart"><img src="./image/icon/cart-plus.png" alt=""></div>
-                            </div>
-                        </div>
-                        <div class="product-article">
-                            <div class="product-text">
-                                <div class="product-name">Monstera deliciosa</div>
-                                <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            </div>
-                            <div class="product-price">10000&ensp;kyats</div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-img"><a href="/productPage.html"><img src="./image/product/Frangipani.jpg"
-                                    alt=""></a>
-                            <div class="product-icon">
-                                <div class="quick-view"><img src="./image/icon/view.png" alt=""></div>
-                                <div class="add-cart"><img src="./image/icon/cart-plus.png" alt=""></div>
-                            </div>
-                        </div>
-                        <div class="product-article">
-                            <div class="product-text">
-                                <div class="product-name">Frangipani</div>
-                                <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            </div>
-                            <div class="product-price">40000&ensp;kyats</div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-img"><a href="/productPage.html"><img
-                                    src="./image/product/Africandaisies.jpg" alt=""></a>
-                            <div class="product-icon">
-                                <div class="quick-view"><img src="./image/icon/view.png" alt=""></div>
-                                <div class="add-cart"><img src="./image/icon/cart-plus.png" alt=""></div>
-                            </div>
-                        </div>
-                        <div class="product-article">
-                            <div class="product-text">
-                                <div class="product-name">African daisies</div>
-                                <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            </div>
-                            <div class="product-price">40000&ensp;kyats</div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-img"><a href="/productPage.html"><img
-                                    src="./image/product/BridalBouquets.jpg" alt=""></a>
-                            <div class="product-icon">
-                                <div class="quick-view"><img src="./image/icon/view.png" alt=""></div>
-                                <div class="add-cart"><img src="./image/icon/cart-plus.png" alt=""></div>
-                            </div>
-                        </div>
-                        <div class="product-article">
-                            <div class="product-text">
-                                <div class="product-name">Bridal Bouquets</div>
-                                <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                            </div>
-                            <div class="product-price">20000&ensp;kyats</div>
-                        </div>
-                    </div>
+                     -->
 
                 </div>
                 <div class="pagi"></div>
@@ -642,6 +463,35 @@
         <div class="copyright">© 2023 MARIGOLD FLOWERS & SHOP&ensp;|&ensp;PRIVACY POLICY&ensp;|&ensp;TERMS OF USE </div>
     </footer>
     <!-- footer end -->
+    
+    <div class="category-filter">
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" viewBox="0 0 100 100" y="0"
+            x="0" xmlns="http://www.w3.org/2000/svg"  version="1.1"
+            style="height: 100%; width: 100%;">
+            <g class="ldl-scale"
+               >
+                <g class="ldl-ani">
+                    <g class="ldl-layer">
+                        <g class="ldl-ani"
+                            >
+                            <path stroke-miterlimit="10" stroke-width="3px"  fill="#386142"
+                                d="M53.5 29.3h-7c-1.1 0-1.9.9-1.9 1.9v57.1c0 1.6 2 2.3 3 1.1l7.2-8.8c.4-.5.6-1.1.6-1.8V31.2c0-1-.8-1.9-1.9-1.9z"
+                                ></path>
+                        </g>
+                    </g>
+                    <g class="ldl-layer">
+                        <g class="ldl-ani"
+                            >
+                            <path stroke-miterlimit="10" stroke-width="3px"  fill="#FFD7A4"
+                                d="M55.5 48h-11L13.4 12.8c-1-1.1-.2-2.8 1.3-2.8h70.7c1.5 0 2.2 1.7 1.3 2.8L55.5 48z"
+                                ></path>
+                        </g>
+                    </g>
+                   
+                </g>
+            </g>
+        </svg>
+    </div>
 </body>
 
 

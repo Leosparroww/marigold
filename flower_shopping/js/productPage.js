@@ -92,7 +92,7 @@ const productId = new URL(window.location).searchParams.get("id");
 //       console.log(error);
 //     });
 // }
-var productList = JSON.parse(sessionStorage.getItem("productList"));
+var productList = JSON.parse(sessionStorage.getItem("productLists"));
 const categoryDada = JSON.parse(sessionStorage.getItem("category"));
 var product = productList.find((item) => item.product_id == productId);
 var productImage = product.image.split(",");
