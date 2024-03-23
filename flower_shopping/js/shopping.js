@@ -1069,9 +1069,12 @@ function autocomplete(inp) {
     
 
 
-
+   val = val.replace(/[^\w\s]/g, '')
     //search
-    if (!val) { return false; }
+    if (!val.trim() ) { return false; }
+    //val = val.trim().replace(/^\|+|\|+$/g, '')
+    
+    
     let myObject = fetch(`https://fdfg.theorymm.com/api/search/` + val)
     .then(response => response.json())
       .then(data => {
@@ -1115,9 +1118,12 @@ function autocomplete(inp) {
   });
 
   function searchFetch() {
+    let aset = "/";
+    if(inp.value.trim() == "" || undefined || null){
     
-
-    fetch(`https://fdfg.theorymm.com/api/search/` + inp.value)
+      aset= ""
+    }
+    fetch(`https://fdfg.theorymm.com/api/search`+ aset + inp.value.replace(/[^\w\s]/g, ''))
     .then(response => response.json() )
     .then(data => {
      
