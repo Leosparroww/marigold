@@ -696,7 +696,7 @@ function autocomplete(inp) {
 
   function searchFetch() {
     let aset = "/";
-    if(inp.value.trim() == "" || undefined || null){
+    if(inp.value.replace(/[^\w\s]/g, '').trim() == "" || undefined || null){
       aset= ""
     }
     fetch(`https://fdfg.theorymm.com/api/search`+ aset + inp.value.replace(/[^\w\s]/g, ''))
